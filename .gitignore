@@ -141,6 +141,9 @@ env.bak/
 venv.bak/
 django_pack/
 .vscode/
+/btre_resources
+/static
+/media
 
 
 # Spyder project settings
