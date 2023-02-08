@@ -6,7 +6,7 @@ class Realtor(models.Model):
     ID is automatically generated from foreign key
     """
     name = models.CharField(max_length=20)
-    phone = models.ImageField(upload_to="photo_main/%Y/%m/d/")
+    photo = models.ImageField(upload_to="photo_main/%Y/%m/%d/", blank=True)
     description = models.TextField(blank=True)
     phone = models.CharField(max_length=20)
     email = models.CharField(max_length=50)

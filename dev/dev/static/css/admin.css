@@ -1,0 +1,34 @@
+#header {
+height: 50px;
+background: #133264;
+color: #FFF;
+}
+
+#branding {
+color: #FFF;
+
+}
+a:link, a:visited {
+color: #133264; ;
+
+}
+div.breadcrumb {
+    background: #30caa0;
+    color: #11434d;
+
+}
+div.breadcrumb a {
+    background: #000000;
+
+}
+
+.module caption, .inline-group h2 {
+    background: #30caa0;
+    color: #11434d;
+
+}
+
+input, textarea, select, .form-row p, form .button {
+    scrollbar-color: #30caa0;
+
+}
