@@ -1,3 +1,7 @@
 from django.db import models
 
-# Create your models here.
+from listing.models import Listing
+
+
+# class Listing(Listing):
+#     pass 

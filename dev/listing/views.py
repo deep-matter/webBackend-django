@@ -3,7 +3,7 @@ from django.core.paginator import  PageNotAnInteger ,EmptyPage , Paginator
 from .models import Listing
 
 def listing(request):
-    listings = Listing.objects.all() # 
+    listings = Listing.objects.order_by('-list_date').filter(is_published=True)
     paginator = Paginator(listings,5)
     page_num = request.GET.get('page')
     paged_listing = paginator.get_page(page_num)
