@@ -1,15 +1,15 @@
 from django.shortcuts import render
-from django.core.paginator import  PageNotAnInteger ,EmptyPage
+from django.core.paginator import  PageNotAnInteger ,EmptyPage , Paginator
 from .models import Listing
 
 def listing(request):
     listings = Listing.objects.all() # 
-    # Pagination= Paginator(listings,3)
-    # page = request.GET.get('page')
-    # paged_listing = Pagination(page)
+    paginator = Paginator(listings,5)
+    page_num = request.GET.get('page')
+    paged_listing = paginator.get_page(page_num)
     
     content = {
-        "listing": listings,
+        "listing": paged_listing,
     }
     return render(request, 'listing/listing.html',content)
 
