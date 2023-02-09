@@ -41,7 +41,44 @@ now as long as far doing this learning of django Framework we will be setting up
             <!-- Custom CSS -->
             <link href="{% static "/css/clean-blog.min.css" %}" rel="stylesheet">
             </head>  
-      ```    
+      ``` 
+* setting the database connections and Configuration 
+   -  at this step most of the application out there used **PostgresSQL** database in Production Level  
+   fisrt install PostgreSQL and for more information install install PgAdmin to access the database through GUI interface 
+   by default django framework used Sqlite3 as default database , 
+
+   ```python 
+      DATABASES = {
+            "default": {
+                  "ENGINE": "django.db.backends.postgresql",
+                  "NAME": "houselist",
+                  "USER":"postgres",
+                  "PASSWORD":"*******",
+                  "host":"localhost"
+            }
+            }
+      ```
+* setting the data Upload folder  Configuration 
+   -  in our case to save the Images which uploaded through admin area we will configure the Media folder settings that Django provide to us as default setup 
+
+    ```python 
+      DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+      ## the media file settings
+      MEDIA_ROOT = os.path.join(BASE_DIR , "media")
+      MEDIA_URL = "media/"
+      ```
+    but we will need to add the static Path to in urls.py in project settings 
+
+     ```python 
+     urlpattern = [] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+     ```
+
+
+                  
+   
+
+
+
 
      
 
