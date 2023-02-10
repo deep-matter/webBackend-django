@@ -66,12 +66,13 @@ now as long as far doing this learning of django Framework we will be setting up
       ## the media file settings
       MEDIA_ROOT = os.path.join(BASE_DIR , "media")
       MEDIA_URL = "media/"
-      ```
+    ```
     but we will need to add the static Path to in urls.py in project settings 
 
      ```python 
      urlpattern = [] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
      ```
+* Queries SQL : in this part we wil use ORM built methods to query the data for more [Info](https://www.w3schools.com/django/django_queryset_filter.php) visit this site to get hands-on the Filter methods used to translate the based method class to SQL language 
 
 
                   
